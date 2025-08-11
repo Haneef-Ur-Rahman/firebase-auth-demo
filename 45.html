@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up / Sign In</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        #authForm {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #00ffff55;
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 0 15px #00ffff;
+            color: #fff;
+            text-align: center;
+        }
+
+        #authForm h2 {
+            margin-bottom: 25px;
+            font-size: 28px;
+            color: #00ffff;
+            text-shadow: 0 0 10px #00ffffaa;
+        }
+
+        .form__group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form__label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .form__input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #00ffff55;
+            background-color: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            outline: none;
+            transition: 0.3s ease;
+        }
+
+        .form__input:focus {
+            border-color: #00ffff;
+            box-shadow: 0 0 10px #00ffff;
+        }
+
+        .form__button,
+        #googleAuthBtn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .form__button {
+            background-color: #00ffff;
+            color: #000;
+            margin-bottom: 15px;
+            box-shadow: 0 0 10px #00ffff;
+        }
+
+        .form__button:hover {
+            background-color: #00dddd;
+            box-shadow: 0 0 20px #00ffff;
+        }
+
+        #googleAuthBtn {
+            background-color: #db4437;
+            color: white;
+            box-shadow: 0 0 10px #db4437aa;
+        }
+
+        #googleAuthBtn:hover {
+            background-color: #c1352d;
+            box-shadow: 0 0 15px #db4437;
+        }
+
+        .toggle-auth-mode {
+            margin-top: 15px;
+            color: #bbb;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .toggle-auth-mode:hover {
+            color: #00ffff;
+        }
+
+        ::placeholder {
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <form id="authForm" class="form">
+        <h2 id="formTitle">Sign Up</h2>
+        
+        <div class="form__group">
+            <label for="email" class="form__label">Email</label>
+            <input type="email" class="form__input" id="email" placeholder="Enter your email" required>
+        </div>
+        
+        <div class="form__group">
+            <label for="password" class="form__label">Password</label>
+            <input type="password" class="form__input" id="password" placeholder="Enter your password" required>
+        </div>
+        
+        <div class="form__group">
+            <button type="submit" class="form__button" id="submitBtn">Sign Up</button>
+        </div>
+
+        <button type="button" id="googleAuthBtn">Continue with Google</button>
+        
+        <p class="toggle-auth-mode" id="toggleAuthMode">
+            Already have an account? Sign In
+        </p>
+    </form>
+
+    <script src="45.js" type="module"></script>
+</body>
+</html>
